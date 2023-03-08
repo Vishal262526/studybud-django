@@ -5,15 +5,16 @@ Room
 {% endblock %}
 
 {% block body %}
-<table border="1" >
-    <tr>
-        <th>ID</th>
-        <a href="/room/{{room.id}}"><th>Name</th></a>
-    </tr>
+
+<h1>Single Room Page</h1>
+
+{{data}}
+
+<ul>
     {% for room in data %}
-    <tr>
-       
-    </tr>
+        <li><a href="{% url 'room' room.id %}">{{room.id}} === {{room.name}}</a></li>
     {% endfor %}
-</table>
+</ul>
+
+
 {% endblock %}
